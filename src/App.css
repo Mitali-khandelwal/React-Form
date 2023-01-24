@@ -1,38 +1,72 @@
-.App {
+
+body {
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
+  margin: 0;
+   
+}
+form 
+{
+  position: relative;
+  border: 1px solid rgb(152, 21, 93);
+  width: 30%;
+  height: 40%;
+  margin:   10% auto;
+  padding: 2em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  /* we create our grid */
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1em 1em 1em 1em;
+}
+
+button {
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
+}
+
+button:after {
+  content: " >>>";
+}
+
+button:hover,
+button:focus {
+  outline: none;
+  background: #000;
+  color: #fff;
+}
+
+table {
+margin-bottom: 10px;
+  /* border: 2px solid forestgreen; */
+  width: 30%;
+  /* height: 200px; */
+  margin-left: 35%;
+}
+th {
+  letter-spacing: 2px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-weight: 100;
+  padding: 5px;
+  border: 1px solid black;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 500px;
+
 }
 
-.App-link {
-  color: #61dafb;
+td {
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 100;
+  padding: 5px;
+  border: 1px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

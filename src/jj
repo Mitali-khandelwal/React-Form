@@ -1,0 +1,16 @@
+const editinfo =(index)=>{
+
+    document.getElementById("name").value=document.getElementsByClassName("infoname")[index].innerHTML
+    document.getElementById("address").value=document.getElementsByClassName("infoadd")[index].innerHTML
+    document.getElementById("email").value=document.getElementsByClassName("infoemail")[index].innerHTML 
+    setform({["gender"]: document.getElementsByClassName("infogender")[index].innerHTML})
+    if (document.getElementsByClassName("infogender")[index].innerHTML=="Male"){
+        
+        document.getElementById("male").checked=true
+
+    }
+    else {
+    
+        document.getElementById("female").checked=true
+    }
+}
