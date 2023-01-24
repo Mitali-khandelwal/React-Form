@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Address = ({address , handleChange})=>{
+const Address = ({address, handleChange})=>{
 
 return(
     <>

@@ -42,22 +42,24 @@ setform({
       city: "",
       state: "",
       zip: "",
-      
+
     }]
 });
 }
-const handleChange = (e) =>{
+const handleChange = (e, index) =>{
  const {name , value} = e.target
 
  if(form.hasOwnProperty(name)){
    setform({ ...form , [name]: value})
  }
- else{
-   const address = [...form.address]
-   address[0] = {...address[0], [name]:value } 
-   setform({...form,address})
- }
 
+}
+
+const handleaddress = ( e , index)=>{
+   const {name , value} = e.target
+   const address = [...form.address]
+   address[index] = {...address[index], [name]: value } 
+   setform({...form, address});
 }
 
 const handledit = (id)=>{
@@ -84,8 +86,8 @@ return(
        />
     <label>Address:-</label>
     <br />
-    {form?.address.map((add) => (
-      <Address  address = {add} handleChange = {handleChange}/>
+    {form?.address.map((add, index) => (
+      <Address  address = {add} handleChange = {(e) =>  handleaddress(e, index)} />
     ))}
 
        
